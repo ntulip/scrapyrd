@@ -18,6 +18,7 @@ class Controller_Scraps extends Controller_Template {
 	public function action_index()
 	{
 		$this->template->title = 'New Scrap';
+		$this->template->type = 'php'; // Eventually remember what they chose last time
 		$this->template->content = new View('scraps/form');
 	}
 
@@ -29,7 +30,7 @@ class Controller_Scraps extends Controller_Template {
 		{
 			$this->template->title = 'Reply to Scrap';
 			$this->template->content = new View('scraps/form');
-			$this->template->content->code = $scrap->contents;
+			$this->template->content->set('code', $scrap->contents, false);
 			$this->template->content->type = $scrap->type;
 		}
 		else

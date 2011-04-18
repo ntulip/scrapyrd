@@ -8,11 +8,7 @@
 			)); ?></p>
 			<p>
 				<?php echo Form::input(array('type' => 'submit', 'name' => 'submit', 'id' => 'submit', 'value' => 'Create Scrap')); ?>
-			<?php echo Form::select(array(
-				'name' => 'type',
-				'id'	=> 'type',
-				'options'	=> Scrapyrd::$languages,
-				'selected'	=> (isset($type) ? $type : 'php'),
-			)); ?>&nbsp;<input type="checkbox" id="private" name="private" value="1" /> <label for="private">Private</label>
+				<?php echo Form::select('type', (isset($type) ? $type : 'php'), Scrapyrd::$languages, array('id' => 'type')); ?>&nbsp;
+				<input type="checkbox" id="private" name="private" value="1" />&nbsp;<label for="private">Private</label>
 			</p>
 			<?php echo Form::close(); ?>
