@@ -1,0 +1,109 @@
+body {
+	background-color: #D5E1DD;
+	margin: 0;
+	font-family: 'Trebuchet MS', sans-serif;
+	font-size: 14px;
+}
+#header {
+	background: #2B3E42 url(../img/scrapyrd.png) no-repeat 15px 15px;
+	padding: 15px 15px 15px 60px;
+}
+#header h1 {
+	color: #D5E1DD;
+	margin: 0;
+	padding: 0;
+	font-size: 24px;
+	font-weight: normal;
+	float: left;
+}
+#info {
+	font-size: 16px;
+	color: #F2583E;
+	float: right;
+	padding-top: 6px;
+}
+#content {
+	padding: 15px;
+}
+h2 {
+	font-size: 18px;
+	margin: 0 0 10px 0;
+}
+ol {
+	margin: 0;
+}
+ol li {
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+ul#nav,
+ul#nav li {
+	margin: 0 0 0 15px;
+	padding: 0;
+	list-style: none;
+	float: left;
+	font-size: 17px;
+}
+ul#nav li {
+	float: left;
+}
+ul#nav li a {
+	display: block;
+	color: #77BED2;
+	text-decoration: none;
+	padding: 5px 15px;
+}
+ul#nav li a:hover {
+	color: #F7F3E8;
+	background-color: #747E80;
+}
+#code-block {
+	border: 1px solid #CCC;
+	width: 95%;
+	overflow: auto;
+	padding: 10px;
+}
+#code-block table tr td {
+	vertical-align: baseline;
+	padding: 1px 10px 4px 10px;
+}
+
+#code-block,
+#code-block pre {
+	font-family: monospace;
+	background-color: #FFF;
+	font-size: 14px;
+	margin: 0;
+	line-height: 1.2em;
+}
+#code-pre {
+}
+#contents {
+	width: 95%;
+	height: 95%;
+	font-family: monospace;
+	font-size: 14px;
+}
+#footer {
+	margin: 20px 15px;
+	border-top: 1px solid #999;
+	padding-top: 7px;
+}
+#footer p {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	color: #666;
+}
+a { color: #000; }
+
+td.line_num {
+	color: #000;
+}
+
+#code-block .block-header {
+	font-family: 'Trebuchet MS', sans-serif;
+	font-size: 14px;
+}
