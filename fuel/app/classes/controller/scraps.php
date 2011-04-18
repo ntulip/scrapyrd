@@ -49,23 +49,22 @@ class Controller_Scraps extends Controller_Template {
 			$short_id = Scrapyrd::inc($last_short_id);
 			$contents = Input::post('contents');
 			$private = Input::post('private', '0');
-			
+
 			if ($private != '0')
 			{
 				$short_id = sha1($contents.microtime(true));
 			}
 			else
 			{
-				$settings = Setting::find(1);
-				$settings->last_short_id = $short_id;
-				$settings->save();
+				$last_scrap->last_short_id = $short_id;
+				$last_scrap->save();
 			}
 
-			$scrap = new Scrap;
+			$scrap = new Model_Scrap;
 			$scrap->contents = $contents;
 			$scrap->short_id = $short_id;
 			$scrap->type = Input::post('type');
-			$scrap->private = Input::post('private', '0');
+			$scrap->private = $private;
 			$scrap->created_at = time();
 			$scrap->updated_at = time();
 			$scrap->save();
@@ -115,7 +114,7 @@ class Controller_Scraps extends Controller_Template {
 	public function action_raw()
 	{
 		$short_id = Uri::segment(2);
-		$scrap = Scrap::find_by_short_id($short_id);
+		$scrap = Model_Scrap::find_by_short_id($short_id);
 
 		if ($scrap)
 		{
