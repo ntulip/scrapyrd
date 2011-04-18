@@ -34,9 +34,9 @@ return array(
 		'type'			=> 'mysql',
 		'connection'	=> array(
 			'hostname'   => 'localhost',
-			'database'   => 'fuel_prod',
-			'username'   => 'root',
-			'password'   => '',
+			'database'   => 'scrapyrd',
+			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
+			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,
 		),
 		'table_prefix' => '',
@@ -44,44 +44,6 @@ return array(
 		'caching'      => false,
 		'profiling'    => false,
 	),
-
-	'test' => array(
-		'type'			=> 'mysql',
-		'connection'	=> array(
-			'hostname'   => 'localhost',
-			'database'   => 'fuel_test',
-			'username'   => 'root',
-			'password'   => '',
-			'persistent' => false,
-		),
-		'table_prefix' => '',
-		'charset'      => 'utf8',
-		'caching'      => false,
-		'profiling'    => false,
-	),
-
-	'qa' => array(
-		'type'			=> 'mysql',
-		'connection'	=> array(
-			'hostname'   => 'localhost',
-			'database'   => 'fuel_qa',
-			'username'   => 'root',
-			'password'   => '',
-			'persistent' => false,
-		),
-		'table_prefix' => '',
-		'charset'      => 'utf8',
-		'caching'      => false,
-		'profiling'    => false,
-	),
-
-	'redis' => array(
-		'default' => array(
-			'hostname'	=> '127.0.0.1',
-			'port'		=> 6379,
-		)
-	),
-
 );
 
 /* End of file db.php */
