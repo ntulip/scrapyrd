@@ -78,6 +78,7 @@ class Controller_Scraps extends Controller_Template {
 			$scrap->private = $private;
 			$scrap->created_at = time();
 			$scrap->updated_at = time();
+			$scrap->views = 0;
 			$scrap->save();
 			
 			if (Fuel::$env === Fuel::PRODUCTION)
