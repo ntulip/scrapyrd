@@ -8,6 +8,9 @@ body {
 	background: #2B3E42 url(../img/scrapyrd.png) no-repeat 15px 15px;
 	padding: 15px 15px 15px 60px;
 }
+#header img {
+	vertical-align: middle;
+}
 #header h1 {
 	color: #D5E1DD;
 	margin: 0;
@@ -106,4 +109,22 @@ td.line_num {
 #code-block .block-header {
 	font-family: 'Trebuchet MS', sans-serif;
 	font-size: 14px;
+}
+#user_info,
+#user_info a {
+	color: #AAA;
+}
+.avatar {
+	border: 2px solid #666;
+}
+.scrap {
+	border-top: 2px solid #999;
+	padding-top: 5px;
+	margin: 0 0 40px 0;
+}
+.preview {
+	background-color: #EEEEEE !important;
+	border: 1px dashed #999 !important;;
+	margin: 15px 0 0 0;
+	padding: 0 15px;
 }

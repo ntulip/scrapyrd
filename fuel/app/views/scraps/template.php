@@ -38,9 +38,20 @@
 		<h1>ScrapYrd</h1>
 		<ul id="nav">
 			<li><?php echo Html::anchor('', 'New Scrap'); ?></li>
+			<?php if ($logged_in): ?>
+			<li><?php echo Html::anchor('list', 'My Scraps'); ?></li>
+			<?php endif; ?>
 		</ul>
 		<div id="info">
+			<span id="user_info">
+			<?php if ( ! $logged_in): ?>
+			<?php echo Html::anchor('twitter/login', Asset::img('sign-in-with-twitter.png')); ?>&nbsp;|
 			Share your Code Scraps!
+			<?php else: ?>
+			Logged in as <strong><?php echo $user->name; ?></strong> <?php echo Asset::img($user->avatar, array('height' => '25', 'width' => '25', 'class' => 'avatar')); ?> |
+			<?php echo Html::anchor('twitter/logout', 'Logout'); ?>
+			<?php endif; ?>
+			</span>
 		</div>
 		<div style="clear:both;"></div>
 	</div>

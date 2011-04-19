@@ -6,7 +6,7 @@ require_once COREPATH.'bootstrap.php';
 /**
  * Set the timezone to what you need it to be.
  */
-date_default_timezone_set('UTC');
+date_default_timezone_set('America/New_York');
 
 /**
  * Set the encoding you would like to use.
