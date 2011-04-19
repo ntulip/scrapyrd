@@ -133,6 +133,7 @@ return array(
 		 */
 		'packages'	=> array(
 			'orm',
+			'twitter',
 		),
 
 		/**

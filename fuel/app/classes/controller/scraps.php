@@ -10,9 +10,22 @@
  * @link       http://scrapyrd.com
  */
 
+use Twitter\Tweet;
+
 class Controller_Scraps extends Controller_Template {
 
 	public $template = 'scraps/template';
+
+	public function before()
+	{
+		parent::before();
+		$this->template->logged_in = Tweet::instance()->logged_in();
+		
+		if ($this->template->logged_in)
+		{
+			$this->template->user = Model_User::find_by_id(Session::get('user_id'));
+		}
+	}
 
 	public function router($method, $params)
 	{
@@ -49,6 +62,16 @@ class Controller_Scraps extends Controller_Template {
 		}
 	}
 
+	public function action_list()
+	{
+		if ( ! $this->template->logged_in)
+		{
+			Response::redirect('twitter/login');
+		}
+		$scraps = Model_Scrap::find_all_by_user_id(Session::get('user_id'));
+		$this->template->title = 'My Scraps';
+		$this->template->content = new View('scraps/list', array('scraps' => $scraps));
+	}
 
 	public function action_new()
 	{
@@ -71,6 +94,12 @@ class Controller_Scraps extends Controller_Template {
 				$last_scrap->save();
 			}
 
+			$user_id = null;
+			if ($this->template->logged_in)
+			{
+				$user_id = Session::get('user_id');
+			}
+
 			$scrap = new Model_Scrap;
 			$scrap->contents = $contents;
 			$scrap->short_id = $short_id;
@@ -78,6 +107,7 @@ class Controller_Scraps extends Controller_Template {
 			$scrap->private = $private;
 			$scrap->created_at = time();
 			$scrap->updated_at = time();
+			$scrap->user_id = $user_id;
 			$scrap->views = 0;
 			$scrap->save();
 			
