@@ -18,10 +18,10 @@ return array(
 	'dev' => array(
 		'type'			=> 'mysql',
 		'connection'	=> array(
-			'hostname'   => '127.0.0.1',
-			'database'   => 'scrapyrd',
-			'username'   => 'root',
-			'password'   => '',
+			'hostname'   => '/tmp/mysql/myrle.sock',
+			'database'   => 'myrle',
+			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
+			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,
 		),
 		'table_prefix' => '',
