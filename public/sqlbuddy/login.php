@@ -87,7 +87,7 @@ if (($adapter != "sqlite" && $host && $user && ($pass || $_POST)) || ($adapter =
 		redirect($redirect);
 		exit;
 	} else {
-		$error = __("There was a problem logging you in.");
+		$error = __("There was a problem logging you in.<br />".$connCheck->error());
 	}
 }
 
