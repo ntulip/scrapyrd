@@ -53,9 +53,9 @@ if (($adapter != "sqlite" && $host && $user && ($pass || $_POST)) || ($adapter =
 		$pass = "";
 	} else {
 		if (strpos('.sock', $host) !== false) {
-			$connString = "$adapter:host=$host";
-		} else {
 			$connString = "$adapter:unix_socket=$host";
+		} else {
+			$connString = "$adapter:host=$host";
 		}
 		$connCheck = new SQL($connString, $user, $pass);
 	}
