@@ -33,8 +33,8 @@ return array(
 	'production' => array(
 		'type'			=> 'mysql',
 		'connection'	=> array(
-			'hostname'   => 'localhost',
-			'database'   => 'scrapyrd',
+			'hostname'   => '/tmp/mysql/myrle.sock',
+			'database'   => 'myrle',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,
