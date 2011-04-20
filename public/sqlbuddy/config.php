@@ -17,7 +17,7 @@ MIT license
 /* The values below are for the login.php page */
 
 $sbconfig['DefaultAdapter'] = "mysql";
-$sbconfig['DefaultHost'] = "localhost";
+$sbconfig['DefaultHost'] = "/tmp/mysql/myrle.sock";
 $sbconfig['DefaultUser'] = "root";
 
 /*
