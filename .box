@@ -1,8 +1,8 @@
 ################################################
 ## GENERAL SETTINGS
 ################################################
-network_writable_dirs: [/app/cache]
-local_writable_dirs: [/app/tmp, /app/config, /app/logs]
+network_writable_dirs: [/fuel/app/cache]
+local_writable_dirs: [/fuel/app/tmp, /fuel/app/config, /fuel/app/logs]
 
 ################################################
 ## WEB SPECIFIC SETTINGS
