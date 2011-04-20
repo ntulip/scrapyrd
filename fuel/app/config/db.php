@@ -16,9 +16,10 @@ return array(
 	'active' => Config::get('environment'),
 
 	'dev' => array(
-		'type'			=> 'mysql',
+		'type'			=> 'mysqli',
 		'connection'	=> array(
-			'hostname'   => '/tmp/mysql/myrle.sock',
+			'hostname'   => null,
+			'socket'     => '/tmp/mysql/myrle.sock',
 			'database'   => 'myrle',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
@@ -31,10 +32,10 @@ return array(
 	),
 
 	'production' => array(
-		'type'			=> 'mysql',
+		'type'			=> 'mysqli',
 		'connection'	=> array(
-			'hostname'   => '/tmp/mysql/myrle.sock',
-			'database'   => 'myrle',
+			'hostname'   => null,
+			'socket'     => '/tmp/mysql/myrle.sock',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,
