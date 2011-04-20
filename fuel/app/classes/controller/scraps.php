@@ -77,6 +77,10 @@ class Controller_Scraps extends Controller_Template {
 	{
 		if (Input::post('contents'))
 		{
+			if (Input::post('dont-fill-this-out'))
+			{
+				die ('I told you not to fill it out.');
+			}
 			$last_scrap = Model_Setting::find(1);
 			$last_short_id = ($last_scrap === NULL) ? 0 : $last_scrap->last_short_id;
 
