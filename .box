@@ -1,0 +1,29 @@
+################################################
+## GENERAL SETTINGS
+################################################
+network_writable_dirs: [/app/cache]
+local_writable_dirs: [/app/tmp, /app/config, /app/logs]
+
+################################################
+## WEB SPECIFIC SETTINGS
+################################################
+document_root: /public
+index_list: [index.php]
+default_gateway: index.php 
+
+################################################
+## PHP SPECIFIC SETTINGS
+################################################
+php_version: 5.3.6
+php_extensions: [apc, mysql, gd, filter, curl, mbstring]
+php_error_reporting: 'E_ALL'
+php_display_errors: On
+php_short_open_tag: Off
+php_default_mimetype: text/html
+php_date_timezone: America/New_York
+php_max_execution_time: 30
+php_max_input_time: 60
+php_post_max_size: 8M
+php_file_uploads: On
+php_upload_max_filesize: 2M
+php_max_file_uploads: 20
