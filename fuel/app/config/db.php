@@ -11,7 +11,7 @@
  * @copyright  2010 - 2011 Fuel Development Team
  * @link       http://fuelphp.com
  */
-
+die('here!!');
 return array(
 	'active' => Config::get('environment'),
 
