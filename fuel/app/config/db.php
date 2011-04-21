@@ -16,10 +16,9 @@ return array(
 	'active' => Config::get('environment'),
 
 	'dev' => array(
-		'type'			=> 'mysql',
+		'type'			=> 'pdo',
 		'connection'	=> array(
-			'hostname'   => '/tmp/mysql/myrle.sock',
-			'database'   => 'myrle',
+			'dsn'   => 'mysql:host=localhost;dbname=myrle;unix_socket=/tmp/mysql/myrle.sock',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,
@@ -33,8 +32,7 @@ return array(
 	'production' => array(
 		'type'			=> 'mysql',
 		'connection'	=> array(
-			'hostname'   => '/tmp/mysql/myrle.sock',
-			'database'   => 'myrle',
+			'dsn'   => 'mysql:host=localhost;dbname=myrle;unix_socket=/tmp/mysql/myrle.sock',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,

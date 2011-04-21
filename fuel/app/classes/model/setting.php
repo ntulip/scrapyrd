@@ -10,4 +10,6 @@
  * @link       http://scrapyrd.com
  */
 
-class Model_Setting extends Orm\Model { }
+class Model_Setting extends Orm\Model {
+	public static $_properties = array('last_short_id', 'site_enabled');
+}

@@ -10,4 +10,6 @@
  * @link       http://scrapyrd.com
  */
 
-class Model_Scrap extends Orm\Model { }
+class Model_Scrap extends Orm\Model {
+	public static $_properties = array('type', 'contents', 'created_at', 'updated_at', 'short_id', 'private', 'views', 'user_id');
+}
