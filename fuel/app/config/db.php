@@ -18,8 +18,7 @@ return array(
 	'dev' => array(
 		'type'			=> 'mysql',
 		'connection'	=> array(
-			'hostname'   => null,
-			'socket'     => '/tmp/mysql/myrle.sock',
+			'hostname'   => '/tmp/mysql/myrle.sock',
 			'database'   => 'myrle',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
@@ -34,8 +33,7 @@ return array(
 	'production' => array(
 		'type'			=> 'mysql',
 		'connection'	=> array(
-			'hostname'   => null,
-			'socket'     => '/tmp/mysql/myrle.sock',
+			'hostname'   => '/tmp/mysql/myrle.sock',
 			'database'   => 'myrle',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
