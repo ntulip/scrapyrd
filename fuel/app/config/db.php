@@ -11,13 +11,12 @@
  * @copyright  2010 - 2011 Fuel Development Team
  * @link       http://fuelphp.com
  */
-Debug::dump($_SERVER);
-die();
+
 return array(
 	'active' => Config::get('environment'),
 
 	'dev' => array(
-		'type'			=> 'mysqli',
+		'type'			=> 'mysql',
 		'connection'	=> array(
 			'hostname'   => null,
 			'socket'     => '/tmp/mysql/myrle.sock',
@@ -33,7 +32,7 @@ return array(
 	),
 
 	'production' => array(
-		'type'			=> 'mysqli',
+		'type'			=> 'mysql',
 		'connection'	=> array(
 			'hostname'   => null,
 			'socket'     => '/tmp/mysql/myrle.sock',
