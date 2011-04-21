@@ -30,7 +30,7 @@ return array(
 	),
 
 	'production' => array(
-		'type'			=> 'mysql',
+		'type'			=> 'pdo',
 		'connection'	=> array(
 			'dsn'   => 'mysql:host=localhost;dbname=myrle;unix_socket=/tmp/mysql/myrle.sock',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
