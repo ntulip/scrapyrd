@@ -11,5 +11,5 @@
  */
 
 class Model_Scrap extends Orm\Model {
-	public static $_properties = array('type', 'contents', 'created_at', 'updated_at', 'short_id', 'private', 'views', 'user_id');
+	public static $_properties = array('id', 'type', 'contents', 'created_at', 'updated_at', 'short_id', 'private', 'views', 'user_id');
 }

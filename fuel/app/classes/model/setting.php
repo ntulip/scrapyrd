@@ -11,5 +11,5 @@
  */
 
 class Model_Setting extends Orm\Model {
-	public static $_properties = array('last_short_id', 'site_enabled');
+	public static $_properties = array('id', 'last_short_id', 'site_enabled');
 }
