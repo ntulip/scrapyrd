@@ -11,14 +11,15 @@
  * @copyright  2010 - 2011 Fuel Development Team
  * @link       http://fuelphp.com
  */
-die('here!!');
+
 return array(
 	'active' => Config::get('environment'),
 
 	'dev' => array(
-		'type'			=> 'pdo',
+		'type'			=> 'mysql',
 		'connection'	=> array(
-			'dsn'   => 'mysql:host=localhost;dbname=myrle;unix_socket=/tmp/mysql/myrle.sock',
+			'hostname'   => '/tmp/mysql/myrle.sock',
+			'database'   => 'myrle',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,
@@ -30,9 +31,10 @@ return array(
 	),
 
 	'production' => array(
-		'type'			=> 'pdo',
+		'type'			=> 'mysql',
 		'connection'	=> array(
-			'dsn'   => 'mysql:host=localhost;dbname=myrle;unix_socket=/tmp/mysql/myrle.sock',
+			'hostname'   => '/tmp/mysql/myrle.sock',
+			'database'   => 'myrle',
 			'username'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_USERNAME'] : '',
 			'password'   => isset($_SERVER['DB_USERNAME']) ? $_SERVER['DB_PASSWORD'] : '',
 			'persistent' => false,
